@@ -5,14 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ProductPageComponent } from './product-page/product-page.component';
-import { ProductDescriptioComponent } from './product-descriptio/product-descriptio.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductPageComponent,
-    ProductDescriptioComponent,
     ProductDescriptionComponent
   ],
   imports: [
@@ -20,7 +19,7 @@ import { ProductDescriptionComponent } from './product-description/product-descr
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
